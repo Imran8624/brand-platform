@@ -1,0 +1,13 @@
+{
+  "name": "inkloom-ai-server",
+  "version": "1.0.0",
+  "description": "Inkloom AI - Node/Express Server for Pre-Publication Brand Governance",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

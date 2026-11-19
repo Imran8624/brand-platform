@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inkloom Test</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { background: #09090B; color: #fff; font-family: sans-serif; padding: 40px; }
+    #status { padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    .ok { background: #064e3b; border: 1px solid #10b981; }
+    .err { background: #450a0a; border: 1px solid #ef4444; }
+  </style>
+</head>
+<body>
+  <div id="status" class="ok">Loading...</div>
+  <div id="root"></div>
+
+  <script>
+    var statusEl = document.getElementById('status');
+
+    // Track CDN loads
+    var cdnStatus = { react: false, reactdom: false, babel: false };
+    
+    function checkReady() {
+      if (window.React) cdnStatus.react = true;
+      if (window.ReactDOM) cdnStatus.reactdom = true;
+      if (window.Babel) cdnStatus.babel = true;
+      statusEl.innerHTML = 'React: ' + cdnStatus.react + ' | ReactDOM: ' + cdnStatus.reactdom + ' | Babel: ' + cdnStatus.babel;
+      if (cdnStatus.react && cdnStatus.reactdom && cdnStatus.babel) {
+        statusEl.className = 'ok';
+        statusEl.innerHTML += '<br><strong>✓ All CDN scripts loaded!</strong>';
+      }
+    }
+    
+    window.onerror = function(msg, src, line, col, err) {
+      statusEl.className = 'err';
+      statusEl.innerHTML = '✗ Error: ' + msg + ' (line ' + line + ')<br>' + (err ? err.stack : '');
+      return false;
+    };
+    
+    setTimeout(checkReady, 3000);
+  </script>
+
+  <script type="text/babel">
+    function TestApp() {
+      const [count, setCount] = React.useState(0);
+      return (
+        <div>
+          <h1 style={{color: '#DB2777', fontSize: '2rem'}}>✓ React + Babel Working!</h1>
+          <p>Count: {count}</p>
+          <button onClick={() => setCount(count + 1)} style={{background: '#2563EB', color: 'white', padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer'}}>
+            Increment
+          </button>
+        </div>
+      );
+    }
+    
+    try {
+      ReactDOM.createRoot(document.getElementById('root')).render(<TestApp />);
+      document.getElementById('status').className = 'ok';
+      document.getElementById('status').innerHTML = '✓ React mounted successfully!';
+    } catch(e) {
+      document.getElementById('status').className = 'err';
+      document.getElementById('status').innerHTML = 'React mount error: ' + e.message + '<br>' + e.stack;
+    }
+  </script>
+</body>
+</html>

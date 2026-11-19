@@ -1,0 +1,7 @@
+Acme Brand Guidelines 2026
+Tone: friendly, clear, human. Avoid aggressive hype.
+Palette: #0066CC #FFFFFF #F5F5F5
+Acme Widget | uptime | 99.99%
+Acme Widget | launch date | June 2026
+DO NOT USE: Acme Widget Pro -> Acme Widget
+DO NOT USE: synergy -> teamwork
