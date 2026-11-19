@@ -11,8 +11,9 @@ Built for a hackathon. **Fully offline** — no external LLM/API keys required. 
 deterministic/rule-based with clearly-labeled detection methods (deterministic / heuristic),
 satisfying the "AI Transparency" requirement.
 
-## 🚀 One-Click Deploy Links
+## 🚀 One-Click Deploy & Live Demo Links
 
+- **Live Demo Link (Immediate Access)**: [https://clocks-holly-programmer-promotions.trycloudflare.com](https://clocks-holly-programmer-promotions.trycloudflare.com)
 - **Deploy on Render**: [Deploy to Render](https://render.com/deploy?repo=https://github.com/Imran8624/brand-platform)
 - **Deploy on Railway**: [Deploy on Railway](https://railway.app/new/template?template=https://github.com/Imran8624/brand-platform)
 - **GitHub Repository**: [https://github.com/Imran8624/brand-platform](https://github.com/Imran8624/brand-platform)
