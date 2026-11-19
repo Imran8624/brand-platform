@@ -4,9 +4,18 @@ Operational, human-in-the-loop pre-publication control system that transforms st
 guidelines into enforceable, explainable guardrails — preventing off-brand, inaccurate, or
 non-compliant content from reaching the public while accelerating team review cycles.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Imran8624/brand-platform)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Imran8624/brand-platform)
+
 Built for a hackathon. **Fully offline** — no external LLM/API keys required. All detection is
 deterministic/rule-based with clearly-labeled detection methods (deterministic / heuristic),
 satisfying the "AI Transparency" requirement.
+
+## 🚀 One-Click Deploy Links
+
+- **Deploy on Render**: [Deploy to Render](https://render.com/deploy?repo=https://github.com/Imran8624/brand-platform)
+- **Deploy on Railway**: [Deploy on Railway](https://railway.app/new/template?template=https://github.com/Imran8624/brand-platform)
+- **GitHub Repository**: [https://github.com/Imran8624/brand-platform](https://github.com/Imran8624/brand-platform)
 
 ## What it delivers
 
